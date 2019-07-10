@@ -1,11 +1,11 @@
-interface Point {
+export interface TargetPoint {
   x: number;
   y: number;
 }
 
 export interface Round {
   level: number;
-  target?: Point;
-  side: number;
-  map: number[];
+  map: string[][];
+  targetPoint?: TargetPoint[];
+  sideLength?: number;
 }
