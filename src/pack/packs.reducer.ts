@@ -4,12 +4,12 @@ import { Action } from 'redux';
 import * as PackActions from './pack.actions';
 
 export interface PacksState {
-  currentPack: Pack;
+  currentPackIndex: number;
   entities: Pack[];
 }
 
 const initialState: PacksState = {
-  currentPack: null,
+  currentPackIndex: null,
   entities: [
     { name: "Pack 1", progressRound: 0, rounds: makeRounds(1, 20, false) },
     { name: "Pack 2", progressRound: 0, rounds: makeRounds(21, 20, false) },
@@ -22,9 +22,9 @@ const initialState: PacksState = {
 export const PacksReducer = (state: PacksState = initialState, action: Action): PacksState => {
   switch (action.type) {
     case PackActions.LEVEL_UP_PACK: {
-      const pack = (action as PackActions.SelectPackAction).pack;
+      const packIndex = (action as PackActions.SelectPackAction).packIndex;
       return {
-        currentPack: pack,
+        currentPackIndex: packIndex,
         entities: state.entities,
       };
     }

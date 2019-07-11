@@ -3,12 +3,12 @@ import { Pack } from './pack.model';
 
 export const SELECT_PACK = '[Pack] Select';
 export interface SelectPackAction extends Action {
-  pack: Pack;
+  packIndex: number;
 }
 export const selectPack: ActionCreator<SelectPackAction> =
-  (pack) => ({
+  (packIndex) => ({
     type: SELECT_PACK,
-    pack,
+    packIndex,
   });
 
 
