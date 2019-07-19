@@ -1,19 +1,36 @@
 const one = {
-  currentLevel: 1,
+  userLevel: 3,
   levels: {
     'level_1': {
       id: 'level_1',
+      level: 1,
       pack: 'pack_1',
       roundId: 'round_1',
       isOpened: true,
     },
     'level_2': {
       id: 'level_2',
+      level: 2,
       pack: 'pack_1',
       roundId: 'round_2',
+      isOpened: true,
+    },
+    'level_3': {
+      id: 'level_3',
+      level: 3,
+      pack: 'pack_1',
+      roundId: 'round_3',
+      isOpened: false,
+    },
+    'level_4': {
+      id: 'level_4',
+      level: 4,
+      pack: 'pack_1',
+      roundId: 'round_4',
       isOpened: false,
     },
   },
+  currentLevelId: 'level_2',
   selectedPackId: 'pack_1', // 'Pack1' | 'Pack2' | 'Pack3' | 'Pack4' | 'Pack5'
   rounds: {
     'round_1': {
